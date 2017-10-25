@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 
+let versionobj= require('/opt/app/version.json'); 
 var app = express();
 
 // view engine setup
@@ -24,7 +25,7 @@ app.get("/", function(req, res, next) {
 });
 
 app.get("/version", function(req, res, next) {
-    let versionobj= require('./version.json'); 
+  console.log("version: "+versionobj.version);
     res.send(versionobj.version);
     res.end();
   });

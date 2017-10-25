@@ -26,7 +26,7 @@
                           "portMappings": [],
               "privileged": false,
               "parameters": [],
-              "forcePullImage": false
+              "forcePullImage": true
           }
       },
       "healthChecks": [
@@ -59,7 +59,7 @@
           "protocol": "tcp",
           "name": "myp",
           "labels": {
-              "VIP_0": "$ENV/$PATHui:80"
+              "VIP_0": "ENV/APPNAMEui:80"
           }
       }],
       "requirePorts": true
