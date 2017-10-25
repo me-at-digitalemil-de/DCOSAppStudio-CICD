@@ -22,8 +22,7 @@
           "volumes": [],
           "docker": {
               "image": "digitalemil/mypublicrepo:dcosappstudio-uiservice-v1.0.0",
-  "network": "HOST",
-                          "portMappings": [],
+              "portMappings": null,
               "privileged": false,
               "parameters": [],
               "forcePullImage": true
@@ -59,7 +58,7 @@
           "protocol": "tcp",
           "name": "myp",
           "labels": {
-              "VIP_0": "ENV/APPNAMEui:80"
+              "VIP_0": "ENV/APPNAMEuiservice:80"
           }
       }],
       "requirePorts": true
