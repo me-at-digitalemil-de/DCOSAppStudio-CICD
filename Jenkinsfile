@@ -40,7 +40,7 @@ def gitCommit() {
             forceUpdate: true,
             credentialsId: 'dcos-token',
             filename: 'versions/uiservice.json',
-            id: '/prod/microservices/app/ui/uiservice',
+            id: '/prod/microservices/APPNAME/ui/uiservice',
             docker: "${env.DOCKERHUB_REPO}:app-uiservice-v2.0.0"
         )
     }
