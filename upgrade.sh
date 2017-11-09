@@ -3,7 +3,7 @@ cp -r versions/2.0.0/* .
 cp versions/Jenkinsfile-v2.0.0 ./Jenkinsfile
 
 APPNAME=$(jq .id config.json | sed 's|.*/||' | sed 's|"||')
-echo Setting CICD up for: $APPNAME
+echo Upgrading $APPNAME
 
 sed -ie "s@APPNAME@$APPNAME@g;" Jenkinsfile
 sed -ie "s@ENV@/prod/microservices@g;" Jenkinsfile 
